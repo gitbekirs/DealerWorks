@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 
-
+#region builder config
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -13,11 +13,11 @@ var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddDbContext<DataContext>(options =>
 //    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
 
-app.Run();
+//app.MapGet("/", () => "Hello World!");
+
+
 
 //var test = "bekir";
 //var test2 = "þengönül";
@@ -30,6 +30,8 @@ app.Run();
 //config
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettings"));
 builder.Services.AddOptions();
+
+
 
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
@@ -44,12 +46,25 @@ builder.Services.AddMvc(x =>
 });
 
 builder.Services.Configure<RouteOptions>(routeOptions => routeOptions.AppendTrailingSlash=true);
+#endregion
+
+
+
+
 
 if (builder.Environment.IsDevelopment())
 {
-    //builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+    builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+}
+
+var app = builder.Build();
+
+if (builder.Environment.IsDevelopment())
+{
     app.UseStatusCodePages();
 }
+
+
 
 app.UseDeveloperExceptionPage();
 app.UseRouting();
@@ -81,5 +96,8 @@ app.UseMvc( routes =>
     routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
 });
 
-//ders 6 da kaldým
-//https://www.youtube.com/watch?v=mRkaduteAAs&list=PLjn_v5iA99pkZvq4rvp4tM7unhX1dzlU2&index=6p
+//ders 7 de kaldým
+//https://www.youtube.com/watch?v=e-BipURYZ-o&list=PLjn_v5iA99pkZvq4rvp4tM7unhX1dzlU2&index=7
+
+
+app.Run();
