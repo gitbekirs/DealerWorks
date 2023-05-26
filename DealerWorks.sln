@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerWorks.Data", "DealerW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DealerWorks.WebUI.Infrastructure", "DealerWorks.WebUI.Infrastructure\DealerWorks.WebUI.Infrastructure.csproj", "{1D752B85-59CE-43F8-A70C-415E8598CC66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerWorks.WebUI.Management", "DealerWorks.WebUI.Management\DealerWorks.WebUI.Management.csproj", "{0B1A51C5-AF4E-4C45-8D5D-6CADEC4E022D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{1D752B85-59CE-43F8-A70C-415E8598CC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D752B85-59CE-43F8-A70C-415E8598CC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D752B85-59CE-43F8-A70C-415E8598CC66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B1A51C5-AF4E-4C45-8D5D-6CADEC4E022D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B1A51C5-AF4E-4C45-8D5D-6CADEC4E022D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B1A51C5-AF4E-4C45-8D5D-6CADEC4E022D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B1A51C5-AF4E-4C45-8D5D-6CADEC4E022D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3C61648D-7D02-4FD4-B611-224C1020A5C5} = {B8806AA9-AF41-49FF-A941-DA68D456D49A}
 		{1D752B85-59CE-43F8-A70C-415E8598CC66} = {B8806AA9-AF41-49FF-A941-DA68D456D49A}
+		{0B1A51C5-AF4E-4C45-8D5D-6CADEC4E022D} = {B8806AA9-AF41-49FF-A941-DA68D456D49A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C4F4803-3D75-4AE5-A70C-0D3464581B7D}
