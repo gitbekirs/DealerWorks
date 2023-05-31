@@ -9,23 +9,31 @@ using System.Threading.Tasks;
 namespace DealerWorks.Data
 {
 
-    public class DataContext:DbContext
+    public class DataContext : DbContext
     {
-        public DataContext(string connectionString):base(new DbContextOptionsBuilder().UseSqlServer(connectionString).Options)
+        public DataContext(string connectionString) : base(new DbContextOptionsBuilder().UseSqlServer(connectionString).Options)
         {
+
         }
 
-        //public DataContext(DbContextOptions<DataContext> options):base(options)
+        //public DataContext() 
         //{
         //}
 
+        //public DataContext(DbContextOptions<DataContext> options) : base(options)
+        //{
+        //}
+
+
+
+
         public DbSet<Model.Kategori> Kategoris { get; set; }
-        public DbSet<Model.Marka>  Markas { get; set; }
-        public DbSet<Model.Model>  Models{ get; set; }
-        public DbSet<Model.Urun>  Uruns { get; set; }
-        public DbSet<Model.UrunFiyat>  UrunFiyats{ get; set; }
-        public DbSet<Model.UrunGorsel>  UrunGorsels{ get; set; }
-        public DbSet<Model.Setting>  Setting { get; set; }
+        public DbSet<Model.Marka> Markas { get; set; }
+        public DbSet<Model.Model> Models { get; set; }
+        public DbSet<Model.Urun> Uruns { get; set; }
+        public DbSet<Model.UrunFiyat> UrunFiyats { get; set; }
+        public DbSet<Model.UrunGorsel> UrunGorsels { get; set; }
+        public DbSet<Model.Setting> Setting { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
